@@ -4,12 +4,13 @@
 <head>
     <title>Project</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<link rel="stylesheet" href="style.css" >
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div id="form">
-        <form action="/surveys/submitSurvey" method="POST">
+        <form action="/surveys/submitSurvey" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="csrf_token" value="545jk5fd_42">
             <label for="f_name">First Name</label>
             <input type="text" id="f_name" name="f_name" placeholder="Your First Name" required>
@@ -21,28 +22,31 @@
             <br>
             <label for="age">Your Age</label>
             <select name="age_range" id="age">
-                <option value="Your Age">18</option>
-                <option value="Age">18-25</option>
-                <option value="Age">>25</option>
+                <option value="<18">Less than 18 Yrs. </option>
+                <option value="18-25">Between 18-25 Yrs. </option>
+                <option value=">25">Greater than 25 Yrs. </option>
             </select>
+            <br> <br>
+            <input type="file" name="project_screenshot[]" id="screenshot" multiple>
+            <br> <br>
+
+
+            <div id="secondinfo">
+                <textarea name="project_description" id="discription" cols="70" rows="10" placeholder="Your discription projects that did it before"></textarea>
+                <br> <br>
+                <label>Do your project done</label>
+                <select name="project_done" id="project_done">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                <br><br>
+            </div>
+            <input type="submit" value="Send">
         </form>
         <br>
     </div>
-    <div id="final">
-        <textarea name="project_description" id="discription" cols="70" rows="10" placeholder="Your discription projects that did it before"></textarea>
-        <br>
-        <input type="file[]"  name="project_screenshot" id="screenshot" multiple>
-        <br> <br>
-        <label>Do your project done</label>
-        <select name="project_done" id="project_done">
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select>
-      
-        <br>
-        <input type="submit" value="Send" >
-    </div>
-<div id="contact">Also you can contact with the support <a href="https://mail.google.com/mail/u/0/#starred?compose=new" ></a>Fadi </a></div>
+
+    <div id="contact">Also you can contact with the support <a href="https://mail.google.com/mail/u/0/#starred?compose=new">Fadi</a></div>
     <footer>&COPY; ALL COPY RIGHT RESERVED AT RE:CODED </footer>
 </body>
 
