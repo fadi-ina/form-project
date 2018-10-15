@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Project</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="style.css" >
+</head>
+
+<body>
+    <div id="form">
+        <form action="/surveys/submitSurvey" method="POST">
+            <input type="hidden" name="csrf_token" value="545jk5fd_42">
+            <label for="f_name">First Name</label>
+            <input type="text" id="f_name" name="f_name" placeholder="Your First Name" required>
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="l_name" required placeholder="Your Last Nmae">
+            <label for="email"> Email</label>
+            <input type="email" name="email" id="email" placeholder="Your Email" required>
+            <br>
+            <br>
+            <label for="age">Your Age</label>
+            <select name="age_range" id="age">
+                <option value="Your Age">18</option>
+                <option value="Age">18-25</option>
+                <option value="Age">>25</option>
+            </select>
+        </form>
+        <br>
+    </div>
+    <div id="final">
+        <textarea name="project_description" id="discription" cols="70" rows="10" placeholder="Your discription projects that did it before"></textarea>
+        <br>
+        <input type="file[]"  name="project_screenshot" id="screenshot" multiple>
+        <br> <br>
+        <label>Do your project done</label>
+        <select name="project_done" id="project_done">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+      
+        <br>
+        <input type="submit" value="Send" >
+    </div>
+<div id="contact">Also you can contact with the support <a href="https://mail.google.com/mail/u/0/#starred?compose=new" ></a>Fadi </a></div>
+    <footer>&COPY; ALL COPY RIGHT RESERVED AT RE:CODED </footer>
+</body>
+
+</html>
